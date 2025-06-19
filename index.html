@@ -12,6 +12,24 @@
       background: #fff8f0;
       color: #333;
     }
+    nav {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+    nav a {
+      color: #e12c2c;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 20px;
+      font-size: 1.1em;
+    }
     header {
       background-color: #e12c2c;
       color: white;
@@ -60,62 +78,49 @@
   </style>
 </head>
 <body>
-<nav style="background:white; padding: 15px 30px; display:flex; justify-content:space-between; align-items:center;">
-<nav style="background:white; position: sticky; top: 0; z-index: 999; padding: 15px 30px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #eee;">
-  <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
-    <img src="spincy logo.png" alt="Spincy Logo" style="height:200px;">
-    <span style="font-weight:bold; font-size:1.4em; color:#e12c2c;">Spincy</span>
-  </a>
-  <div style="display:flex; gap: 25px; font-size: 1.1em; font-weight: bold;">
-    <a href="/#home" style="color:#e12c2c; text-decoration:none;">Home</a>
-    <a href="/#about" style="color:#e12c2c; text-decoration:none;">About</a>
-    <a href="menu.html" style="color:#e12c2c; text-decoration:none;">Menu</a>
-    <a href="catering.html" style="color:#e12c2c; text-decoration:none;">Catering</a>
-    <a href="/#contact" style="color:#e12c2c; text-decoration:none;">Contact</a>
-  </div>
-</nav>
 
-
-
-
-
+  <nav>
+    <a href="/" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+      <img src="spincy logo.png" alt="Spincy Logo" style="height:200px;">
+      <span style="font-weight:bold; font-size:1.6em; color:#e12c2c;">Spincy</span>
+    </a>
+    <div>
+      <a href="/#home">Home</a>
+      <a href="/#about">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
 
   <header id="home">
-
     <h1>Spincy</h1>
     <p>Authentic Chicken Döner (Gyro) – Fresh, Fast, Flavorful.</p>
   </header>
 
-<section id="about" class="hero" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+  <section id="about" class="hero" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+    <img src="hoagie.jpg" alt="Doner wrap" style="flex: 1; max-width: 500px; border-radius: 12px;">
+    <div style="flex: 1; min-width: 300px;">
+      <h1>Our Story</h1>
+      <p>
+        At Spincy, we believe food is more than fuel — it’s a shared experience, a memory in the making.
+        Our passion for chicken döner is rooted in the rich, diverse streets of Istanbul, where flavor brings people together across cultures and generations.
+        That same spirit lives here in Quincy, where we serve bold, fire-roasted chicken wraps crafted with care, warmth, and just the right spice.
+        <br><br>
+        Whether you’re grabbing a quick bite or sitting down with friends, we’re here to turn everyday meals into flavorful moments.
+        Because at Spincy, it’s not just about what’s on the plate — it’s about the feeling it brings.
+      </p>
+    </div>
+  </section>
 
-  <img src="hoagie.jpg" alt="Doner wrap" style="flex: 1; max-width: 500px; border-radius: 12px;">
-  <div style="flex: 1; min-width: 300px;">
-    <h1 style="font-size: 2.5em; margin-bottom: 10px;">Our Story</h1>
-    <p style="font-size: 1.1em; line-height: 1.6;">
-      At Spincy, we believe food is more than fuel — it’s a shared experience, a memory in the making.
-      Our passion for chicken döner is rooted in the rich, diverse streets of Istanbul, where flavor brings people together across cultures and generations.
-      That same spirit lives here in Quincy, where we serve bold, fire-roasted chicken wraps crafted with care, warmth, and just the right spice.
-      <br><br>
-      Whether you’re grabbing a quick bite or sitting down with friends, we’re here to turn everyday meals into flavorful moments.
-      Because at Spincy, it’s not just about what’s on the plate — it’s about the feeling it brings.
-    </p>
-  </div>
-</section>
-<!-- 🥙 Catering Section -->
-<section id="catering" style="background: #fff0ea; padding: 60px 20px;">
-  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+  <section id="catering" style="background: #fff0ea; padding: 60px 20px; text-align: center;">
     <h2 style="font-size: 2.2em; margin-bottom: 20px;">We Cater Events!</h2>
     <p style="font-size: 1.1em; max-width: 700px; margin: 0 auto 25px;">
       Hosting a party, office lunch, or family gathering? Spincy offers fresh and flavorful catering options with our famous wraps and sides.
       We customize each order to fit your event size and style — with pickup or delivery available!
     </p>
-    <a href="#contact" 
-       style="background: #e12c2c; color: white; padding: 14px 30px; border-radius: 8px; text-decoration: none; font-size: 1.1em;">
-       📩 Contact Us for Catering
-    </a>
-  </div>
-</section>
-
+    <a href="/#contact" style="background: #e12c2c; color: white; padding: 14px 30px; border-radius: 8px; text-decoration: none; font-size: 1.1em;">📩 Contact Us for Catering</a>
+  </section>
 
   <section class="mission">
     <h1>Our Mission</h1>
@@ -131,28 +136,23 @@
     <a href="#">Donate a Meal</a>
   </section>
 
-  <!-- Floating See Menu Button -->
-<a href="menu.html" 
-   style="position: fixed; bottom: 20px; right: 20px; background: #e12c2c; color: white; padding: 14px 24px; border-radius: 50px; font-size: 1em; font-weight: bold; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 999;">
-   📋 See Our Menu & Order 
-</a>
+  <a href="menu.html" style="position: fixed; bottom: 20px; right: 20px; background: #e12c2c; color: white; padding: 14px 24px; border-radius: 50px; font-size: 1em; font-weight: bold; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 999;">
+    📋 See Our Menu & Order
+  </a>
 
-<!-- 📞 Contact Section -->
-<section id="contact" style="background: #fffaf6; padding: 60px 20px;">
-  <h2 style="text-align: center; font-size: 2em; margin-bottom: 40px;">Get In Touch</h2>
-  
-  <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; max-width: 1000px; margin: 0 auto;">
-    <div style="flex: 1; min-width: 280px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <h3 style="color:#e12c2c;">📍 Visit Us</h3>
-      <p>104 N 6th Street, Quincy, IL</p>
-      <h3 style="color:#e12c2c;">📞 Call or Text</h3>
-      <p><a href="tel:+12175551234" style="color: #333; text-decoration: none;">(217) 555-1234</a></p>
-      <h3 style="color:#e12c2c;">📧 Email</h3>
-      <p><a href="mailto:spincyquincy@gmail.com" style="color: #333; text-decoration: none;">spincyquincy@gmail.com</a></p>
+  <section id="contact" style="background: #fffaf6; padding: 60px 20px;">
+    <h2 style="text-align: center; font-size: 2em; margin-bottom: 40px;">Get In Touch</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; max-width: 1000px; margin: 0 auto;">
+      <div style="flex: 1; min-width: 280px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h3 style="color:#e12c2c;">📍 Visit Us</h3>
+        <p>104 N 6th Street, Quincy, IL</p>
+        <h3 style="color:#e12c2c;">📞 Call or Text</h3>
+        <p><a href="tel:+12173160755" style="color: #333; text-decoration: none;">(217) 316-0755</a></p>
+        <h3 style="color:#e12c2c;">📧 Email</h3>
+        <p><a href="mailto:spincyquincy@gmail.com" style="color: #333; text-decoration: none;">spincyquincy@gmail.com</a></p>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <footer>
     © 2025 Spincy Quincy. All rights reserved.
