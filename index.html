@@ -5,23 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Spincy Quincy</title>
   <style>
-    html, body {
+    /* RESET AND BASE */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
       font-family: Arial, sans-serif;
       background: #fff8f0;
       color: #333;
-      max-width: 100%;
-      overflow-x: hidden;
     }
 
     img {
       max-width: 100%;
       height: auto;
+      display: block;
     }
 
+    /* NAVIGATION */
     nav {
-      background: transparent;
       position: absolute;
       top: 0;
       left: 0;
@@ -29,8 +35,10 @@
       z-index: 10;
       padding: 20px 40px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      background: transparent;
     }
 
     nav a {
@@ -42,31 +50,62 @@
       text-shadow: 1px 1px 3px black;
     }
 
-    header {
-      background-color: #e12c2c;
+    /* OUR STORY SECTION */
+    #about {
+      background: url('Wrapp.png') center/cover no-repeat;
+      padding: 250px 20px 100px;
+      text-align: center;
       color: white;
-      padding: 30px 20px;
-      text-align: center;
+      position: relative;
     }
 
-    .hero, .mission {
-      padding: 40px 20px;
-      text-align: center;
+    .about-heading-box {
+      background-color: rgba(0, 0, 0, 0.55);
+      display: inline-block;
+      padding: 20px 40px;
+      border-radius: 10px;
+      margin-bottom: 40px;
     }
 
-    .hero h1, .mission h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+    .about-heading-box h2 {
+      font-size: 2.8em;
+      color: #ffd700;
+      margin: 0;
     }
 
-    .hero p, .mission p {
+    #about p {
       font-size: 1.2em;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
+      line-height: 1.7;
+      font-weight: 400;
     }
 
+    /* MISSION SECTION */
     .mission {
-      background-color: #fdf4f4;
+      background-color: #fff8f0;
+      padding: 60px 20px;
+    }
+
+    .mission .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 40px;
+    }
+
+    .mission h2 {
+      font-size: 2.5em;
+      color: #e12c2c;
+      margin-bottom: 20px;
+    }
+
+    .mission p {
+      font-size: 1.1em;
+      line-height: 1.6;
     }
 
     .mission a {
@@ -76,35 +115,11 @@
       text-decoration: none;
       border-radius: 6px;
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 20px;
       font-weight: bold;
     }
 
-    #about {
-      background: url('Wrapp.png') center/cover no-repeat;
-      padding: 160px 20px 80px;
-      color: white;
-      text-align: center;
-    }
-
-    #about h2 {
-      font-size: 2.8em;
-      color: #ffd700;
-      margin-bottom: 25px;
-      border: none;
-    }
-
-    #about p {
-      font-size: 1.2em;
-      max-width: 900px;
-      margin: 0 auto;
-      line-height: 1.7;
-      font-weight: 400;
-      background-color: rgba(0, 0, 0, 0.5); /* Optional for readability */
-      padding: 20px;
-      border-radius: 8px;
-    }
-
+    /* FOOTER */
     footer {
       background: #222;
       color: #eee;
@@ -112,18 +127,22 @@
       padding: 15px;
       font-size: 0.9em;
     }
+
+    /* LOGO ADJUSTMENT */
+    .logo img {
+      max-height: 150px;
+      width: auto;
+    }
   </style>
 </head>
 <body>
 
+<!-- NAVIGATION -->
 <nav>
-  <!-- 🍗 Logo + Name -->
-  <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-    <img src="spincy logo.png" alt="Spincy Logo" style="height: 185px;">
+  <a href="/" class="logo">
+    <img src="spincy logo.png" alt="Spincy Logo">
   </a>
-
-  <!-- 🧭 Navigation Links -->
-  <div style="display: flex; gap: 20px;">
+  <div>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="menu.html">Menu</a>
@@ -132,25 +151,27 @@
   </div>
 </nav>
 
-<!-- OUR STORY SECTION -->
+<!-- OUR STORY -->
 <section id="about">
-  <h2>Our Story</h2>
+  <div class="about-heading-box">
+    <h2>Our Story</h2>
+  </div>
   <p>
     At <strong>Spincy</strong>, we believe food is more than fuel — it’s comfort, culture, and connection.
-    
-    Our love for chicken döner was born in the vibrant streets of <strong>Istanbul</strong>, where the aroma of fire-roasted meat, the rhythm of busy sidewalks, and the joy of sharing meals with loved ones fills every corner.
-    
-    That tradition inspired us to bring the same flavor, passion, and hospitality to <strong>Quincy, Illinois</strong> — a place we now proudly call home.
  
+    Our love for chicken döner was born in the vibrant streets of <strong>Istanbul</strong>, where the aroma of fire-roasted meat, the rhythm of busy sidewalks, and the joy of sharing meals with loved ones fills every corner.
+  
+    That tradition inspired us to bring the same flavor, passion, and hospitality to <strong>Quincy, Illinois</strong> — a place we now proudly call home.
+
     Every Spincy wrap is handcrafted with marinated chicken, warm lavash, fresh vegetables, and bold, savory sauce — all served with care and love.
-   
+ 
     Whether you’re grabbing a quick bite or connecting with friends, we’re here to turn every meal into a flavorful moment that brings people together.
   </p>
 </section>
 
-<!-- MISSION SECTION -->
+<!-- MISSION -->
 <section class="mission">
-  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; max-width: 1200px; margin: 0 auto; gap: 40px;">
+  <div class="container">
     <div style="flex: 1; min-width: 300px;">
       <h2>Our Mission</h2>
       <p>
@@ -167,12 +188,5 @@
       <img src="hoagie.jpg" alt="Spincy Hoagie" style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
     </div>
   </div>
-</section>
+</sec
 
-<!-- FOOTER -->
-<footer>
-  &copy; 2025 Spincy Quincy. All rights reserved.
-</footer>
-
-</body>
-</html>
