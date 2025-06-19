@@ -2,67 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Spincy Quincy</title>
   <style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff8f0;
-  color: #333;
-  overflow-x: hidden;
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      color: #333;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
-
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
     nav {
-      background: white;
-      position: sticky;
+      background: transparent;
+      position: absolute;
       top: 0;
-      z-index: 999;
-      padding: 12px 30px;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #eee;
     }
+
     nav a {
-      color: #e12c2c;
+      color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1em;
       margin-left: 20px;
-      font-size: 1.1em;
+      text-shadow: 1px 1px 3px black;
     }
+
     header {
       background-color: #e12c2c;
       color: white;
       padding: 30px 20px;
       text-align: center;
     }
+
     .hero, .mission {
       padding: 40px 20px;
       text-align: center;
     }
-    .hero img {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
+
     .hero h1, .mission h1 {
       font-size: 2.5em;
       margin-bottom: 10px;
     }
+
     .hero p, .mission p {
       font-size: 1.2em;
       max-width: 800px;
       margin: 0 auto;
     }
+
     .mission {
       background-color: #fdf4f4;
     }
+
     .mission a {
       background-color: #e12c2c;
       color: white;
@@ -71,7 +77,34 @@ body {
       border-radius: 6px;
       display: inline-block;
       margin-top: 15px;
+      font-weight: bold;
     }
+
+    #about {
+      background: url('Wrapp.png') center/cover no-repeat;
+      padding: 160px 20px 80px;
+      color: white;
+      text-align: center;
+    }
+
+    #about h2 {
+      font-size: 2.8em;
+      color: #ffd700;
+      margin-bottom: 25px;
+      border: none;
+    }
+
+    #about p {
+      font-size: 1.2em;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-weight: 400;
+      background-color: rgba(0, 0, 0, 0.5); /* Optional for readability */
+      padding: 20px;
+      border-radius: 8px;
+    }
+
     footer {
       background: #222;
       color: #eee;
@@ -83,60 +116,44 @@ body {
 </head>
 <body>
 
-
-
-<nav style="position: absolute; top: 0; left: 0; width: 100%; z-index: 10; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: transparent;">
-  
+<nav>
   <!-- 🍗 Logo + Name -->
   <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
     <img src="spincy logo.png" alt="Spincy Logo" style="height: 185px;">
-  
   </a>
-  
+
   <!-- 🧭 Navigation Links -->
-  <div style="display: flex; gap: 20px; font-size: 1em; font-weight: bold;">
-    <a href="/#home" style="color: white; text-decoration: none; text-shadow: 1px 1px 3px black;">Home</a>
-    <a href="/#about" style="color: white; text-decoration: none; text-shadow: 1px 1px 3px black;">About</a>
-    <a href="menu.html" style="color: white; text-decoration: none; text-shadow: 1px 1px 3px black;">Menu</a>
-    <a href="catering.html" style="color: white; text-decoration: none; text-shadow: 1px 1px 3px black;">Catering</a>
-    <a href="/#contact" style="color: white; text-decoration: none; text-shadow: 1px 1px 3px black;">Contact</a>
+  <div style="display: flex; gap: 20px;">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="catering.html">Catering</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
-
-
-<section id="about" style="
-  background: url('Wrapp.png') center/cover no-repeat;
-  padding: 160px 20px 80px;
-  margin: 0;
-  color: white;
-  text-align: center;
-  overflow-x: hidden;
-">
-  <h2 style="font-size: 2.8em; color: #ffd700; margin-bottom: 25px; border: none;">Our Story</h2>
-  <p style="font-size: 1.2em; max-width: 900px; margin: 0 auto; line-height: 1.7; font-weight: 400;">
+<!-- OUR STORY SECTION -->
+<section id="about">
+  <h2>Our Story</h2>
+  <p>
     At <strong>Spincy</strong>, we believe food is more than fuel — it’s comfort, culture, and connection.
-    <br><br>
+    
     Our love for chicken döner was born in the vibrant streets of <strong>Istanbul</strong>, where the aroma of fire-roasted meat, the rhythm of busy sidewalks, and the joy of sharing meals with loved ones fills every corner.
-    <br><br>
+    
     That tradition inspired us to bring the same flavor, passion, and hospitality to <strong>Quincy, Illinois</strong> — a place we now proudly call home.
-    <br><br>
+ 
     Every Spincy wrap is handcrafted with marinated chicken, warm lavash, fresh vegetables, and bold, savory sauce — all served with care and love.
-    <br><br>
+   
     Whether you’re grabbing a quick bite or connecting with friends, we’re here to turn every meal into a flavorful moment that brings people together.
   </p>
 </section>
 
-
-
-
-
-<!-- MISSION SECTION SIDE-BY-SIDE WITH IMAGE -->
-<section class="mission" style="background-color: #fff8f0; padding: 60px 20px;">
+<!-- MISSION SECTION -->
+<section class="mission">
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; max-width: 1200px; margin: 0 auto; gap: 40px;">
     <div style="flex: 1; min-width: 300px;">
-      <h2 style="font-size: 2.5em; color: #e12c2c; margin-bottom: 20px;">Our Mission</h2>
-      <p style="font-size: 1.1em; line-height: 1.6;">
+      <h2>Our Mission</h2>
+      <p>
         At Spincy, our mission goes beyond serving great food — we want to nourish our community in every sense.
         Inspired by the Turkish tradition of <strong>"askıda ekmek"</strong>, we’ve launched the <strong>“Wrap It Forward”</strong> program:
         a simple way for customers to donate a meal for someone in need.
@@ -144,15 +161,18 @@ body {
         Whether you donate $1 or cover an entire wrap, your kindness goes directly to feeding someone who could use a warm, delicious meal.
         Because at Spincy, we believe food is a human right — and when we share it, we bring hope, dignity, and connection.
       </p>
-      <a href="#contact" style="display:inline-block; background:#e12c2c; color:white; padding:12px 25px; text-decoration:none; border-radius:6px; font-weight:bold; margin-top:20px;">
-  🍽️ Donate a Meal
-</a>
-
+      <a href="#contact">🍽️ Donate a Meal</a>
     </div>
     <div style="flex: 1; min-width: 300px;">
-      <img src="hoagie.jpg" alt="Spincy Hoagie" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <img src="hoagie.jpg" alt="Spincy Hoagie" style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
+<footer>
+  &copy; 2025 Spincy Quincy. All rights reserved.
+</footer>
 
+</body>
+</html>
