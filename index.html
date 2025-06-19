@@ -56,7 +56,7 @@
     #about {
       background:
         linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0,0,0,0.1)),
-        url('Wrapp.png') center/cover no-repeat;
+        url('Wrapp_darkened.png') center/cover no-repeat;
       padding: 250px 20px 100px;
       color: white;
       min-height: 700px;
@@ -71,11 +71,11 @@
     }
 
     .about-heading-box {
-      background-color: rgba(225, 44, 44, 0.35);
-      padding: 20px 40px;
+      background: rgba(161, 20, 20, 0.75);
+      padding: 25px 50px;
+      clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
       border-radius: 10px;
-      margin-bottom: 40px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
       backdrop-filter: blur(3px);
       float: right;
       margin-right: 40px;
@@ -93,14 +93,13 @@
       text-align: left;
     }
 
-.about-paragraph-box p {
-  font-size: 1.2em;
-  line-height: 1.7;
-  font-weight: 400;
-  margin-bottom: 16px;
-  color: white;
-}
-
+    .about-paragraph-box p {
+      font-size: 1.2em;
+      line-height: 1.7;
+      font-weight: 400;
+      margin-bottom: 16px;
+      color: white;
+    }
 
     .mission {
       background-color: #fff8f0;
@@ -166,33 +165,18 @@
 </nav>
 
 <!-- OUR STORY -->
-<div style="
-  background: rgba(161, 20, 20, 0.75); /* darker Spincy red */
-  padding: 25px 50px;
-  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-  backdrop-filter: blur(3px);
-  float: right;
-  margin-right: 40px;
-">
-  <h2 style="
-    font-size: 3em;
-    color: #ffd700;
-    font-weight: bold;
-    margin: 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  ">Our Story</h2>
-</div>
-
- <div class="about-paragraph-box">
-  <p>At <strong>Spincy</strong>, we believe food is more than fuel — it’s comfort, culture, and connection.</p>
-  <p>Our love for chicken döner was born in the vibrant streets of <strong>Istanbul</strong>, where the aroma of fire-roasted meat, the rhythm of busy sidewalks, and the joy of sharing meals with loved ones fills every corner.</p>
-  <p>That tradition inspired us to bring the same flavor, passion, and hospitality to <strong>Quincy, Illinois</strong> — a place we now proudly call home.</p>
-  <p>Every Spincy wrap is handcrafted with marinated chicken, warm lavash, fresh vegetables, and bold, savory sauce — all served with care and love.</p>
-  <p>Whether you’re grabbing a quick bite or connecting with friends, we’re here to turn every meal into a flavorful moment that brings people together.</p>
-</div>
-
+<section id="about">
+  <div class="about-heading-box">
+    <h2>Our Story</h2>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="about-paragraph-box">
+    <p>At <strong>Spincy</strong>, we believe food is more than fuel — it’s comfort, culture, and connection.</p>
+    <p>Our love for chicken döner was born in the vibrant streets of <strong>Istanbul</strong>, where the aroma of fire-roasted meat, the rhythm of busy sidewalks, and the joy of sharing meals with loved ones fills every corner.</p>
+    <p>That tradition inspired us to bring the same flavor, passion, and hospitality to <strong>Quincy, Illinois</strong> — a place we now proudly call home.</p>
+    <p>Every Spincy wrap is handcrafted with marinated chicken, warm lavash, fresh vegetables, and bold, savory sauce — all served with care and love.</p>
+    <p>Whether you’re grabbing a quick bite or connecting with friends, we’re here to turn every meal into a flavorful moment that brings people together.</p>
+  </div>
 </section>
 
 <!-- MISSION -->
