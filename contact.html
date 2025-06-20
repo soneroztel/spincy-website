@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Spincy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      color: #333;
+    }
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      z-index: 1000;
+    }
+    nav img {
+      height: 100px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-shadow: 1px 1px 3px black;
+    }
+    header {
+      background: url('Wrapp.png') center/cover no-repeat;
+      padding: 150px 20px 100px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 3em;
+      background: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 20px 40px;
+      border-radius: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #e12c2c;
+      color: white;
+      padding: 14px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    footer {
+      background: #222;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">
+      <img src="spincy logo.png" alt="Spincy Logo">
+    </a>
+    <div>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Contact Spincy</h1>
+  </header>
+
+  <div class="container">
+    <h2>Reach Out</h2>
+    <p>We'd love to hear from you! Whether you have questions, feedback, or catering requests — drop us a message below or email us directly.</p>
+
+    <form action="https://formspree.io/f/mvgrqepy" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message..." rows="6" required></textarea>
+      <button type="submit">📩 Send Message</button>
+    </form>
+
+    <p style="margin-top: 30px;">📧 Email: <a href="mailto:spincyquincy@gmail.com">spincyquincy@gmail.com</a></p>
+    <p>📞 Phone: <strong>(217) 316-0755</strong></p>
+  </div>
+
+  <footer>
+    &copy; 2025 Spincy Quincy. All rights reserved.
+  </footer>
+</body>
+</html>
