@@ -44,6 +44,21 @@
       text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
+    .menu-container {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 1200px;
+      height: 1000px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin-top: 30px;
+    }
+
     footer {
       background: #222;
       color: #eee;
@@ -54,18 +69,10 @@
   </style>
 </head>
 <body>
-  <div style="text-align: center; padding: 60px 20px;">
-  <h2 style="font-size: 2em; color: #e12c2c;">Order Online</h2>
-  <iframe 
-    src="https://spincy.square.site" 
-    style="width: 100%; max-width: 1200px; height: 1000px; border: none; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
-  </iframe>
-</div>
-
 
   <!-- Navigation -->
   <nav>
-    <a href="/">
+    <a href="index.html">
       <img src="spincy logo.png" alt="Spincy Logo">
     </a>
     <div>
@@ -82,6 +89,12 @@
     <h1>Explore Our Delicious Menu</h1>
   </header>
 
+  <!-- Embedded Square Menu -->
+  <div class="menu-container">
+    <h2 style="font-size: 2em; color: #e12c2c;">Order Online</h2>
+    <iframe src="https://spincy.square.site"></iframe>
+  </div>
+
   <!-- Footer -->
   <footer>
     &copy; 2025 Spincy Quincy. All rights reserved.
@@ -89,4 +102,3 @@
 
 </body>
 </html>
-
