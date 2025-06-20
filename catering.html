@@ -8,59 +8,60 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
-      background: #fff8f0;
+      background: url('https://images.unsplash.com/photo-1606788075761-1f618df7d4db?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat fixed;
       color: #333;
     }
-nav {
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  height: 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
 
-nav img {
-  height: 100px;
-}
+    nav {
+      background: transparent;
+      padding: 0;
+      margin: 0;
+      height: 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
-  font-size: 1.1em;
-  text-shadow: 1px 1px 3px black;
-}
+    nav img {
+      height: 100px;
+    }
 
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-shadow: 1px 1px 3px black;
+    }
 
     header {
       background: url('plate.png') center/cover no-repeat;
       color: white;
-      padding: 120px 20px;
+      padding: 100px 20px;
       text-align: center;
     }
-header h1 {
-  font-size: 3em;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85);
-  padding: 20px 40px;
-  border-radius: 10px;
-  background: none;
-}
 
+    header h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
 
     .container {
       max-width: 900px;
       margin: 60px auto;
-      background-color: rgba(255, 255, 255, 0.96);
+      background-color: rgba(255, 255, 255, 0.92);
       border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
       padding: 60px 20px;
     }
 
@@ -130,11 +131,12 @@ header h1 {
     </div>
   </nav>
 
-  
+ 
 
   <div class="container">
     <div class="content-box">
       <h2>We Cater Events!</h2>
+      <hr style="margin: 40px auto; border: none; height: 2px; background: #e12c2c; width: 60px;" />
       <p>Bring the taste of Spincy to your next event — office lunch, birthday, family gathering, or community party.</p>
       <p>No fixed pricing — we tailor every order to your needs and budget. Reach out and let us help make your event flavorful and stress-free!</p>
 
@@ -145,8 +147,16 @@ header h1 {
         <button type="submit">📩 Send Request</button>
       </form>
 
-      <p style="margin-top: 30px;">📧 Or Spin us directly: <a href="mailto:spincyquincy@gmail.com">spincyquincy@gmail.com</a></p>
+      <div style="background: rgba(255,255,255,0.8); padding: 20px; margin-top: 40px; border-radius: 8px;">
+        <p style="font-style: italic;">"Spincy catered our office lunch and it was a hit! Everyone loved the wraps!"</p>
+        <p style="text-align: right; font-weight: bold;">– Sarah B., Quincy</p>
+      </div>
+
+      <p style="margin-top: 40px;">📧 Or Spin us directly: <a href="mailto:spincyquincy@gmail.com">spincyquincy@gmail.com</a></p>
       <p>📞 Spin us at <strong>(217) 316-0755</strong></p>
+
+      <p style="margin-top: 40px;">📸 Follow our events on Instagram: <a href="https://instagram.com/spincyquincy" target="_blank">@spincyquincy</a></p>
+      <a href="mailto:spincyquincy@gmail.com" class="cta-button">📅 Let's Plan Your Event</a>
     </div>
   </div>
 
