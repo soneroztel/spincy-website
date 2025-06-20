@@ -8,22 +8,18 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
-      background: url('plate.png') center/cover no-repeat fixed;
+      background: url('https://images.unsplash.com/photo-1606788075761-1f618df7d4db?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat fixed;
       color: #333;
     }
 
     nav {
       background: transparent;
-      padding: 0;
-      margin: 0;
-      height: 120px;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: absolute;
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
       z-index: 1000;
     }
 
@@ -41,7 +37,7 @@
     }
 
     header {
-      background: url('plate.png') center/cover no-repeat;
+      background: url('Wrapp.png') center/cover no-repeat;
       color: white;
       padding: 100px 20px;
       text-align: center;
@@ -73,6 +69,14 @@
 
     h1, h2 {
       color: #e12c2c;
+    }
+
+    .divider {
+      width: 80px;
+      height: 5px;
+      background: #e12c2c;
+      margin: 20px auto;
+      border-radius: 5px;
     }
 
     p {
@@ -126,17 +130,18 @@
       <a href="index.html#home">Home</a>
       <a href="index.html#about">About</a>
       <a href="menu.html">Menu</a>
-      <a href="catering.html">Catering</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="catering.html">Catering & Contact</a>
     </div>
   </nav>
 
- 
+  <header>
+    <h1>We Cater With Love</h1>
+  </header>
 
   <div class="container">
     <div class="content-box">
       <h2>We Cater Events!</h2>
-      <hr style="margin: 40px auto; border: none; height: 2px; background: #e12c2c; width: 60px;" />
+      <div class="divider"></div>
       <p>Bring the taste of Spincy to your next event — office lunch, birthday, family gathering, or community party.</p>
       <p>No fixed pricing — we tailor every order to your needs and budget. Reach out and let us help make your event flavorful and stress-free!</p>
 
@@ -147,18 +152,49 @@
         <button type="submit">📩 Send Request</button>
       </form>
 
-      <div style="background: rgba(255,255,255,0.8); padding: 20px; margin-top: 40px; border-radius: 8px;">
-        <p style="font-style: italic;">"Spincy catered our office lunch and it was a hit! Everyone loved the wraps!"</p>
-        <p style="text-align: right; font-weight: bold;">– Sarah B., Quincy</p>
-      </div>
-
-      <p style="margin-top: 40px;">📧 Or Spin us directly: <a href="mailto:spincyquincy@gmail.com">spincyquincy@gmail.com</a></p>
-      <p>📞 Spin us at <strong>(217) 316-0755</strong></p>
-
-      <p style="margin-top: 40px;">📸 Follow our events on Instagram: <a href="https://instagram.com/spincyquincy" target="_blank">@spincyquincy</a></p>
-      <a href="mailto:spincyquincy@gmail.com" class="cta-button">📅 Let's Plan Your Event</a>
+      <p style="margin-top: 30px; font-style: italic;">“Spincy catered my office party — everyone loved it!” — Happy Guest</p>
+      <a href="https://instagram.com/spincyquincy" target="_blank" style="display:inline-block; background:#e12c2c; color:white; padding:10px 20px; border-radius:6px; margin-top:20px; text-decoration:none;">📸 Follow us @spincyquincy</a>
     </div>
   </div>
+
+  <!-- SPIN US SOCIAL SECTION -->
+  <section style="
+    background: url('spin us.png') center/contain no-repeat;
+    background-color: #fff2e6;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    min-height: 500px;
+  ">
+    <a href="https://www.doordash.com/store/spincy-quincy" target="_blank" style="
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    ">
+      <img src="doordash.jfif" alt="DoorDash" style="width: 65px; height: 65px;">
+    </a>
+
+    <a href="https://www.facebook.com/spincyquincy" target="_blank" style="position: absolute; top: 20px; right: 20px;">
+      <img src="facebook.jpg" alt="Facebook" style="height: 60px;">
+    </a>
+
+    <a href="https://www.instagram.com/spincyquincy" target="_blank" style="
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+    ">
+      <img src="instagram.png" alt="Instagram" style="width: 70px; height: 70px;">
+    </a>
+
+    <a href="mailto:spincyquincy@gmail.com" style="
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+    ">
+      <img src="email.jpg" alt="Email" style="width: 70px; height: 70px;">
+    </a>
+  </section>
 
   <footer>
     &copy; 2025 Spincy Quincy. All rights reserved.
