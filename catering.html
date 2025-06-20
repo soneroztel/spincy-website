@@ -1,70 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spincy | Catering</title>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff8f3;
+      background: #fff8f0;
+      color: #333;
     }
+
     nav {
-      background: #e12c2c;
+      background: rgba(225, 44, 44, 0.95);
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
+    nav img {
+      height: 100px;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
       margin-left: 20px;
       font-weight: bold;
+      font-size: 1.1em;
+      text-shadow: 1px 1px 3px black;
     }
+
+    header {
+      background: url('plate.png') center/cover no-repeat;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.2em;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      background-color: rgba(0, 0, 0, 0.55);
+      display: inline-block;
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+
     .container {
       max-width: 900px;
       margin: 60px auto;
-      background: url('https://images.unsplash.com/photo-1606788075761-1f618df7d4db?auto=format&fit=crop&w=1170&q=80') center/cover no-repeat;
+      background-color: rgba(255, 255, 255, 0.96);
       border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
       padding: 60px 20px;
     }
+
     .content-box {
-      background-color: rgba(255,255,255,0.92);
       padding: 40px 30px;
       border-radius: 10px;
       text-align: center;
     }
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 20px;
+
+    h1, h2 {
       color: #e12c2c;
     }
+
     p {
       font-size: 1.1em;
       color: #333;
       margin-bottom: 20px;
     }
-    .cta-button {
-      display: inline-block;
-      background: #e12c2c;
-      color: white;
-      padding: 14px 30px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1.1em;
-      margin-top: 25px;
-    }
+
     form {
       margin-top: 30px;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
+
     input, textarea {
       width: 100%;
       padding: 12px;
@@ -73,6 +92,7 @@
       border: 1px solid #ccc;
       font-size: 1em;
     }
+
     button {
       background: #e12c2c;
       color: white;
@@ -82,12 +102,22 @@
       font-size: 1em;
       cursor: pointer;
     }
+
+    footer {
+      background: #222;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
   </style>
 </head>
 <body>
 
   <nav>
-    <div style="color:white; font-size: 1.4em; font-weight: bold;">Spincy</div>
+    <a href="index.html">
+      <img src="spincy logo.png" alt="Spincy Logo">
+    </a>
     <div>
       <a href="index.html#home">Home</a>
       <a href="index.html#about">About</a>
@@ -97,9 +127,13 @@
     </div>
   </nav>
 
+  <header>
+    <h1>We Cater With Love</h1>
+  </header>
+
   <div class="container">
     <div class="content-box">
-      <h1>We Cater Events!</h1>
+      <h2>We Cater Events!</h2>
       <p>Bring the taste of Spincy to your next event — office lunch, birthday, family gathering, or community party.</p>
       <p>No fixed pricing — we tailor every order to your needs and budget. Reach out and let us help make your event flavorful and stress-free!</p>
 
@@ -114,6 +148,10 @@
       <p>📞 Spin us at <strong>(217) 316-0755</strong></p>
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 Spincy Quincy. All rights reserved.
+  </footer>
 
 </body>
 </html>
