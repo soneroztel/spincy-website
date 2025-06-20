@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Spincy</title>
+  <title>Spincy | About</title>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #fff7f0;
+      background: #fff7f0;
       color: #333;
     }
 
@@ -35,50 +35,49 @@
       font-size: 1.1em;
     }
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 30px;
+      background-color: #fff2e6;
     }
 
-    header h1 {
-      color: #e12c2c;
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-
-    .about-container {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
-
-    .about-container img {
+    .about-section img {
+      max-width: 400px;
       width: 100%;
-      max-width: 350px;
-      display: block;
-      margin: 0 auto 30px;
       border-radius: 12px;
+      margin: 20px;
     }
 
-    .about-container p {
-      font-size: 1.1em;
-      line-height: 1.6;
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .about-text h1 {
+      color: #e12c2c;
       margin-bottom: 20px;
     }
 
-    footer {
-      background: #222;
-      color: #eee;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
+    .about-text p {
+      font-size: 1.1em;
+      margin-bottom: 16px;
+    }
+
+    .signature {
+      position: relative;
+      text-align: left;
+      margin-top: 40px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">
       <img src="spincy logo.png" alt="Spincy Logo">
@@ -88,35 +87,22 @@
       <a href="index.html#about">Our Story</a>
       <a href="menu.html">Menu</a>
       <a href="catering.html">Catering & Contact</a>
+      <a href="about.html">About</a>
     </div>
   </nav>
 
-  <header>
-    <h1>Why Spincy?</h1>
-  </header>
-
-  <div class="about-container">
+  <section class="about-section">
     <img src="chef soner.png" alt="Chef Soner">
+    <div class="about-text">
+      <h1>Why I Started Spincy</h1>
+      <p>I’ve always believed food should be more than just convenient — it should be fresh, healthy, and full of heart. After years of working in restaurants, I saw too many places relying on frozen, oily food with no soul. Spincy is my way of offering something better.</p>
+      <p>I work directly with local farmers to source fresh, high-quality chicken. Supporting other small businesses is important to me — it’s how we strengthen our community, not by depending on giant food chains and national distributors.</p>
+      <p>As someone who struggled financially during school, I know how hard it is to afford a warm, nourishing meal. That’s why we started our <strong>“Donate a Meal”</strong> option — so anyone in need, especially students, can enjoy real food made with care.</p>
+      <p>“When you are generous, you water the roots of someone else’s hope.”</p>
+      <div class="signature">Soner OZTEL<br>Founder</div>
+    </div>
+  </section>
 
-    <p>At Spincy, we believe food should nourish the soul — not just fill the stomach.</p>
-
-    <p>After years working in restaurants, I saw too many meals come from freezers, not from farms. Guests deserved better. I dreamed of offering something fresh — something real. That’s why Spincy was born.</p>
-
-    <p>We partner with local farmers to bring you freshly marinated chicken, hand-cut vegetables, and bold, vibrant flavors — all prepared with love. No shortcuts. No corporate freezers. Just honest food served warm and wrapped with care.</p>
-
-    <p>Spincy isn’t just about taste — it’s about community. While big chains send profits far away, we invest in Quincy. We believe small businesses are the heart of every town, and we’re proud to stand beside our neighbors, not compete with them.</p>
-
-    <p>And for those going through hard times — especially students — we’ve created a donation program to make sure a warm, delicious wrap is never out of reach. Because when we share our food, we share hope. When we lift each other up, something good always grows.</p>
-
-    <p><em>“The generous one will be enriched, and the one who gives a drink of water will receive a drink in return.”</em></p>
-  </div>
-  <div style="position: absolute; bottom: 30px; left: 30px; font-weight: bold; color: white; font-size: 1.2em; text-shadow: 1px 1px 3px black;">
-  Soner OZTEL<br>Founder
-</div>
-
-
-  <footer>
-    &copy; 2025 Spincy Quincy. All rights reserved.
-  </footer>
 </body>
 </html>
+
