@@ -25,120 +25,6 @@
       display: block;
     }
 
-    nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 10;
-      padding: 20px 40px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      background: transparent;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
-      margin-left: 20px;
-      text-shadow: 1px 1px 3px black;
-    }
-
-    .logo img {
-      max-height: 150px;
-      width: auto;
-    }
-
-    #about {
-      background:
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0,0,0,0.1)),
-        url('Wrapp_darkened.png') center/cover no-repeat;
-      padding: 250px 20px 100px;
-      color: white;
-      min-height: 700px;
-    }
-
-    #about h2 {
-      font-size: 3.2em;
-      color: #ffd700;
-      font-weight: bold;
-      margin: 0;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    }
-
-    .about-heading-box {
-      background: rgba(161, 20, 20, 0.75);
-      padding: 25px 50px;
-      clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-      backdrop-filter: blur(3px);
-      float: right;
-      margin-right: 40px;
-    }
-
-    .about-paragraph-box {
-      display: inline-block;
-      background-color: rgba(0, 0, 0, 0.25);
-      padding: 20px 30px;
-      border-radius: 10px;
-      backdrop-filter: blur(2px);
-      max-width: 850px;
-      margin: 0 auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      text-align: left;
-    }
-
-    .about-paragraph-box p {
-      font-size: 1.2em;
-      line-height: 1.7;
-      font-weight: 400;
-      margin-bottom: 16px;
-      color: white;
-    }
-
-    .mission {
-      background-color: #fff8f0;
-      padding: 60px 20px;
-    }
-
-    .mission .container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      gap: 40px;
-    }
-
-    .mission h2 {
-      font-size: 2.5em;
-      color: #e12c2c;
-      margin-bottom: 20px;
-    }
-
-    .mission p {
-      font-size: 1.1em;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    .mission a {
-      background-color: #e12c2c;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 6px;
-      display: inline-block;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-
     footer {
       background: #222;
       color: #eee;
@@ -150,7 +36,6 @@
 </head>
 <body>
 
-<!-- TOP SECTION WITH BACKGROUND IMAGE -->
 <!-- UNIFIED HEADER + OUR STORY SECTION -->
 <section style="
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0,0,0,0.1)),
@@ -206,40 +91,20 @@
   <!-- Our Story Text -->
   <div style="
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.25);
-    padding: 20px 30px;
-    border-radius: 10px;
-    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(3px);
     max-width: 850px;
     margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     text-align: left;
   ">
-    <p>At <strong>Spincy</strong>, we believe food is more than fuel — it’s comfort, culture, and connection.</p>
-    <p>Our love for chicken döner was born in the vibrant streets of <strong>Istanbul</strong>, where the aroma of fire-roasted meat, the rhythm of busy sidewalks, and the joy of sharing meals with loved ones fills every corner.</p>
-    <p>That tradition inspired us to bring the same flavor, passion, and hospitality to <strong>Quincy, Illinois</strong> — a place we now proudly call home.</p>
-    <p>Every Spincy wrap is handcrafted with marinated chicken, warm lavash, fresh vegetables, and bold, savory sauce — all served with care and love.</p>
-    <p>Whether you’re grabbing a quick bite or connecting with friends, we’re here to turn every meal into a flavorful moment that brings people together.</p>
-  </div>
-</section>
-
-<!-- MISSION -->
-<section id="mission" class="mission">
-  <div class="container">
-    <div style="flex: 1; min-width: 300px;">
-      <h2>Our Mission</h2>
-      <p>
-        At Spincy, our mission goes beyond serving great food — we want to nourish our community in every sense.<br><br>
-        Inspired by the Turkish tradition of <strong>"askıda ekmek"</strong>, we’ve launched the <strong>“Wrap It Forward”</strong> program:
-        a simple way for customers to donate a meal for someone in need.<br><br>
-        Whether you donate $1 or cover an entire wrap, your kindness goes directly to feeding someone who could use a warm, delicious meal.<br><br>
-        Because at Spincy, we believe food is a human right — and when we share it, we bring hope, dignity, and connection.
-      </p>
-      <a href="#contact">🍽️ Donate a Meal</a>
-    </div>
-    <div style="flex: 1; min-width: 300px;">
-      <img src="hoagie.jpg" alt="Spincy Hoagie" style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%; height: auto;">
-    </div>
+    <p style="font-size: 1.2em; line-height: 1.7; margin-bottom: 16px;">At <strong>Spincy</strong>, we believe food is more than fuel — it’s comfort, culture, and connection.</p>
+    <p style="font-size: 1.2em; line-height: 1.7; margin-bottom: 16px;">Our love for chicken döner was born in the vibrant streets of <strong>Istanbul</strong>, where the aroma of fire-roasted meat, the rhythm of busy sidewalks, and the joy of sharing meals with loved ones fills every corner.</p>
+    <p style="font-size: 1.2em; line-height: 1.7; margin-bottom: 16px;">That tradition inspired us to bring the same flavor, passion, and hospitality to <strong>Quincy, Illinois</strong> — a place we now proudly call home.</p>
+    <p style="font-size: 1.2em; line-height: 1.7; margin-bottom: 16px;">Every Spincy wrap is handcrafted with marinated chicken, warm lavash, fresh vegetables, and bold, savory sauce — all served with care and love.</p>
+    <p style="font-size: 1.2em; line-height: 1.7;">Whether you’re grabbing a quick bite or connecting with friends, we’re here to turn every meal into a flavorful moment that brings people together.</p>
   </div>
 </section>
 
