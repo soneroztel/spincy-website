@@ -11,6 +11,7 @@
       background: #fff7f0;
       color: #333;
     }
+
     nav {
       background: transparent;
       padding: 15px 30px;
@@ -18,9 +19,11 @@
       justify-content: space-between;
       align-items: center;
     }
+
     nav img {
       height: 100px;
     }
+
     nav a {
       color: #e12c2c;
       text-decoration: none;
@@ -28,50 +31,64 @@
       font-weight: bold;
       font-size: 1.1em;
     }
+
     header {
-      background: url('plate.png') center/cover no-repeat;
-      padding: 100px 20px;
+      background-color: #fff2e6;
+      padding: 60px 20px;
       text-align: center;
-      color: white;
     }
+
     header h1 {
-      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 3em;
+      color: #e12c2c;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    h2 {
+      color: #e12c2c;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      background: #ffe8d6;
+      margin-bottom: 15px;
       padding: 20px;
       border-radius: 10px;
-      font-size: 2.8em;
     }
-    .job-listing {
-      max-width: 900px;
-      margin: 40px auto;
-      background-color: #fff2e6;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .job-listing h2 {
-      color: #e12c2c;
-      margin-bottom: 10px;
-    }
-    .job-listing p {
-      margin-bottom: 10px;
-      font-size: 1.1em;
-    }
-    .job-listing hr {
-      margin: 30px 0;
-      border: none;
-      height: 2px;
-      background: #e12c2c;
+
+    iframe {
+      display: block;
+      margin: 0 auto;
       width: 100%;
+      max-width: 900px;
+      height: 1500px;
+      border: none;
     }
-    .apply-btn {
-      display: inline-block;
-      background: #e12c2c;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
+
+    footer {
+      background: #222;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -91,30 +108,28 @@
   </nav>
 
   <header>
-    <h1>We're Hiring at Spincy!</h1>
+    <h1>Careers at Spincy</h1>
+    <p>We’re not just serving food — we’re building a team that believes in fresh meals, friendly service, and helping our community.</p>
   </header>
 
-  <div class="job-listing">
-    <h2>Prep Cook – $16/hr</h2>
-    <p>Help prepare ingredients before the cooking begins. You’ll chop veggies, portion sauces, and support the team with keeping everything fresh and ready for service.</p>
+  <section>
+    <h2>Open Positions</h2>
+    <ul>
+      <li><strong>Prep-Cook</strong><br>$16/hr — Prepares ingredients and ensures everything is ready for the cook. Must be organized and efficient.</li>
+      <li><strong>Cook</strong><br>$18/hr — Shaves chicken from the döner, warms bread, prepares orders with care and speed.</li>
+      <li><strong>Cashier</strong><br>$15/hr — Takes customer orders, manages payments, keeps the area clean, and assists with online orders.</li>
+      <li><strong>Runner</strong><br>15/hr  — Supports both the kitchen and the front counter. Helps with wrapping, cleaning, and prepping.</li>
+    </ul>
+  </section>
 
-    <hr>
+  <section>
+    <h2>Apply Now</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScbVDgMWsgxCpZpGo-XcEDd9Tq4vNsMlz5ORcpmcaGwBE-RHg/viewform?embedded=true" loading="lazy">Loading…</iframe>
+  </section>
 
-    <h2>Cook – $18/hr</h2>
-    <p>Be the heart of the kitchen. You’ll monitor the spinning doner machine, shave meat perfectly, warm up bread and tortillas, and assemble orders beautifully.</p>
-
-    <hr>
-
-    <h2>Cashier – $15/hr</h2>
-    <p>Take orders with a smile, handle payments, manage online orders, clean tables, and make sure every guest feels welcome and taken care of.</p>
-
-    <hr>
-
-    <h2>Runner – $15/hr</h2>
-    <p>Support the whole team. You’ll assist cooks and cashiers, help with wrapping, prep tasks, and make sure things move smoothly between front and back.</p>
-
-    <a href="mailto:spincyquincy@gmail.com" class="apply-btn">📩 Apply Now</a>
-  </div>
+  <footer>
+    &copy; 2025 Spincy Quincy. All rights reserved.
+  </footer>
 
 </body>
 </html>
