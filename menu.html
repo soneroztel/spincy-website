@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Menu – Spincy Quincy | Chicken Döner & Fast Food</title>
-<meta name="description" content="View Spincy's full menu including our famous chicken döner wraps, lavash wraps, fries, drinks, and more. Fresh toppings and delicious sauces served daily in Quincy, IL.">
-<meta name="keywords" content="Spincy menu, döner menu, Quincy IL food, fast food menu, chicken wraps, lavash wrap, Quincy fast food ,gem city, best., amazing, great, delicious, fast, clean, gyro,sandwich, wrap, drink, cold, hot, sweet, Quncy, gem city , love, quincy news, new, trending, casual , yummy ">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Menu – Spincy Quincy</title>
+
+  <title>Menu – Spincy Quincy | Chicken Döner & Fast Food</title>
+
+  <meta name="description" content="View Spincy's full menu including our famous chicken döner wraps, lavash wraps, fries, drinks, and more. Fresh toppings and delicious sauces served daily in Quincy, IL.">
+
+  <meta name="keywords" content="Spincy menu, döner menu, Quincy IL food, fast food menu, chicken wraps, lavash wrap, Quincy fast food, gem city, gyro, sandwich, wrap, drink, sweet, delicious">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background: #fff8f0; color: #333; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      color: #333;
+    }
 
     nav {
       display: flex;
@@ -18,9 +25,6 @@
       align-items: center;
       padding: 10px 30px;
       background: #e12c2c;
-      position: static;
-      top: 0;
-      z-index: 1000;
     }
 
     nav img {
@@ -52,19 +56,40 @@
       border-radius: 10px;
     }
 
-    .menu-container {
+    .menu-section {
       text-align: center;
       padding: 60px 20px;
     }
 
-    iframe {
-      width: 100%;
+    .menu-section img {
+      width: 95%;
       max-width: 1200px;
-      height: 1000px;
-      border: none;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.25);
+    }
+
+    .order-button {
+      display: inline-block;
+      background-color: #e12c2c;
+      color: white;
+      font-size: 1.3em;
+      padding: 16px 34px;
+      text-decoration: none;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      margin-top: 30px;
+      font-weight: bold;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: 0.3s ease;
+    }
+
+    .order-button:hover {
+      background-color: #c42121;
+      transform: scale(1.05);
+    }
+
+    .order-note {
+      margin-top: 18px;
+      font-size: 1.05em;
     }
 
     footer {
@@ -76,6 +101,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -88,7 +114,6 @@
       <a href="index.html#about">About</a>
       <a href="menu.html">Menu</a>
       <a href="catering.html">Catering & Contact</a>
-    
     </div>
   </nav>
 
@@ -97,15 +122,22 @@
     <h1>Explore Our Delicious Menu</h1>
   </header>
 
-<div style="text-align: center; margin: 100px 20px;">
-  <a href="https://spincy.square.site/?location_id=L8X4J77NK1D66&fulfillment=PICKUP#PRZAIJMQIVNLQDVPMDREEO3B" 
-     target="_blank" 
-     style="background-color:#e12c2c; color:white; font-size:1.3em; padding:15px 30px; text-decoration:none; border-radius:8px;">
-    📋 View Full Menu & Order
-  </a>
-  <p style="margin-top: 20px; color: #333;">We use Square for secure online ordering. Clicking the button will take you to our full menu.</p>
-</div>
+  <!-- Menu Images -->
+  <section class="menu-section">
+    <img src="SPINCY WRAPS (1).jpg" alt="Spincy Menu Page 1">
+    <img src="SPINCY WRAPS (2).png" alt="Spincy Menu Page 2">
 
+    <!-- Order Button -->
+    <a href="https://spincy.square.site/?location_id=L8X4J77NK1D66&fulfillment=PICKUP#PRZAIJMQIVNLQDVPMDREEO3B"
+       target="_blank"
+       class="order-button">
+       ✅ Order Online (Square)
+    </a>
+
+    <p class="order-note">
+      Online ordering available during business hours for pickup.
+    </p>
+  </section>
 
   <!-- Footer -->
   <footer>
