@@ -1,314 +1,485 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Spincy – Chicken Gyros & Fast Food in Quincy, IL</title>
-<meta name="description" content="Spincy serves delicious Turkish-style chicken döner wraps, lavash wraps, and fast food in Quincy, Illinois. Build your wrap with fresh toppings and signature Spinch sauce.">
-<meta name="keywords" content="chicken döner, wraps, fast food Quincy, Turkish food, Mediterranean food, Quincy IL restaurant, döner wrap, lavash wrap, Spincy,best, gyro , sandwich, fries,dessert, fast , maine street , broadway, state, hannibal ,delicious, yummy, healty, yummy , taste, try , warm, hot, cold">
-<meta name="author" content="Spincy Quincy">
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spincy Quincy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spincy | Chicken Döner Wraps in Quincy, IL</title>
+  <meta name="description" content="Spincy serves Turkish-inspired chicken döner wraps, hoagies and fresh sides in Quincy, Illinois. Explore our menu, story and hours.">
   <style>
-    * {
+    :root {
+      --red: #e12c2c;
+      --darkred: #a11414;
+      --yellow: #ffd700;
+      --cream: #fff8f0;
+      --ink: #272321;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
     }
 
-    html, body {
+    a { color: inherit; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    .hero {
+      min-height: 720px;
+      min-height: 90svh;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.28)),
+        url('spincy-1.jpg') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 16px 0;
+    }
+
+    .logo img {
+      width: 150px;
+      max-height: 145px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 10px 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      text-shadow: 0 2px 4px #0009;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--yellow);
+    }
+
+    .hero-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 48px 0 95px;
+    }
+
+    .hero-copy { max-width: 710px; }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-weight: 800;
+      color: var(--yellow);
+      font-size: .85rem;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.08;
+      margin: 14px 0 22px;
+    }
+
+    .hero-copy p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 640px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 8px;
+      font-weight: 800;
+      text-decoration: none;
+      text-align: center;
+      transition: transform .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-red { background: var(--red); color: white; }
+    .btn-yellow { background: var(--yellow); color: #2d231d; }
+    .btn-outline { border: 2px solid white; color: white; }
+
+    section.content { padding: 76px 0; }
+
+    .section-label {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin: 8px 0 20px;
+      color: var(--darkred);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .story p, .mission p { margin: 0 0 16px; }
+    .story { background: white; }
+
+    .story-panel {
+      background: var(--cream);
+      border-left: 6px solid var(--yellow);
+      padding: 32px;
+      border-radius: 12px;
+    }
+
+    .mission { background: var(--cream); }
+
+    .food-img {
       width: 100%;
-      overflow-x: hidden;
-      font-family: Arial, sans-serif;
-      background: #fff8f0;
-      color: #333;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px #0002;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+    .mission .btn { margin-top: 12px; }
+
+    .connect {
+      background:
+        linear-gradient(#0007, #0007),
+        url('spin us.png') center/cover no-repeat;
+      color: white;
+      text-align: center;
     }
+
+    .connect h2 { color: white; }
+    .connect .section-label { color: var(--yellow); }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .socials a {
+      background: white;
+      border-radius: 12px;
+      min-width: 115px;
+      padding: 15px 17px;
+      text-decoration: none;
+      color: var(--darkred);
+      font-weight: 800;
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .socials img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+
+    .visit { background: white; }
+
+    .visit-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--cream);
+      border: 1px solid #f1e3d8;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 25px #00000009;
+    }
+
+    .card h3 {
+      margin: 0 0 20px;
+      font-size: 1.4rem;
+      color: var(--darkred);
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 0;
+      border-bottom: 1px solid #e7dcd1;
+    }
+
+    .hours-row:last-child { border: 0; }
+    .hours-row span:last-child {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .closed { color: var(--red); font-weight: 800; }
+    .address { font-size: 1.15rem; margin: 0 0 15px; }
+    .contact-line { margin: 10px 0; }
+    .card .btn { margin-top: 16px; }
 
     footer {
-      background: #222;
+      background: #231f20;
       color: #eee;
       text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
+      padding: 24px 15px;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero { min-height: 700px; background-position: center; }
+      .nav { flex-direction: column; gap: 6px; padding-top: 14px; }
+      .logo img { width: 120px; max-height: 115px; }
+      .nav-links { justify-content: center; gap: 9px 17px; }
+      .nav-links a { font-size: .9rem; }
+      .hero-content { text-align: center; padding: 55px 0 80px; }
+      .hero-copy { margin: auto; }
+      .actions { justify-content: center; }
+      section.content { padding: 52px 0; }
+      .two-col, .visit-grid { grid-template-columns: 1fr; gap: 28px; }
+      .story-panel, .card { padding: 24px; }
+      .food-img { aspect-ratio: 5/4; }
+    }
+
+    @media (max-width: 390px) {
+      .container { width: calc(100% - 26px); }
+      .nav-links { gap: 8px 12px; }
+      .nav-links a { font-size: .83rem; }
+      .hours-row { font-size: .9rem; }
     }
   </style>
 </head>
-<body style="margin: 0;">
 
-<!-- UNIFIED HEADER + OUR STORY SECTION -->
-<section style="
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0,0,0,0.1)),
-              url('spincy-1.jpg') center/cover no-repeat;
-  padding: 0 20px 100px;
-  color: white;
-  min-height: 100vh;
-">
-  <!-- Navigation -->
-  <nav style="
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 0 0;
-    position: relative;
-    top: 0;
-  ">
-    <a href="/" class="logo">
-      <img src="spincy logo.png" alt="Spincy Logo" style="max-height: 180px;">
-    </a>
-    <div style="display: flex; gap: 30px; font-size: 1.4em; font-weight: bold; align-items: center;">
-      <a href="#home" style="color: white; text-decoration: none; text-shadow: 1px 1px 3px black;">Home</a>
-      <a href="about.html" style="color: white; text-decoration: none; text-shadow: 1px 1px 3px black;">About</a>
-      <a href="menu.html" style="color: white; text-decoration: none; text-shadow: 1px 1px 3px black;">Menu</a>
-      <a href="catering.html" style="color: white; text-decoration: none; text-shadow: 1px 1px 3px black;">Catering & Contact</a>
-      
+<body>
+
+  <!-- HEADER AND HOME -->
+  <header class="hero" id="home">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="index.html#home">
+        <img src="spincy logo.png" alt="Spincy logo">
+      </a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="catering.html">Catering &amp; Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content container">
+      <div class="hero-copy">
+        <div class="eyebrow">Turkish-inspired • Made in Quincy</div>
+
+        <h1>Big Flavor.<br>Freshly Wrapped.</h1>
+
+        <p>
+          Flame-roasted chicken döner, warm lavash, crisp vegetables
+          and bold sauces. Made with care, right here in Quincy.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-yellow" href="menu.html">View Menu &amp; Order</a>
+          <a class="btn btn-outline" href="#story">Our Story</a>
+        </div>
+      </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Our Story Heading -->
-  <div style="
-    background: rgba(161, 20, 20, 0.75);
-    padding: 25px 50px;
-    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-    backdrop-filter: blur(3px);
-    float: right;
-    margin-right: 40px;
-    margin-bottom: 40px;
-  ">
-    <h2 style="
-      font-size: 3em;
-      color: #ffd700;
-      font-weight: bold;
-      margin: 0;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    ">Our Story</h2>
-  </div>
+  <!-- OUR STORY -->
+  <section class="content story" id="story">
+    <div class="container two-col">
+      <div>
+        <div class="section-label">From Istanbul to Quincy</div>
+        <h2>Our Story</h2>
 
-  <div style="clear: both;"></div>
+        <div class="story-panel">
+          <p>At <strong>Spincy</strong>, we believe food is more than fuel — it’s comfort, culture, and connection.</p>
 
-  <!-- Our Story Text -->
-  <div style="
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 30px;
-    border-radius: 12px;
-    backdrop-filter: blur(3px);
-    max-width: 850px;
-    margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    text-align: left;
-  ">
-    <p style="font-size: 1.2em; line-height: 1.7; margin-bottom: 16px;">At <strong>Spincy</strong>, we believe food is more than fuel — it’s comfort, culture, and connection.</p>
-    <p style="font-size: 1.2em; line-height: 1.7; margin-bottom: 16px;">Our love for chicken döner was born in the vibrant streets of <strong>Istanbul</strong>, where the aroma of fire-roasted meat, the rhythm of busy sidewalks, and the joy of sharing meals with loved ones fills every corner.</p>
-    <p style="font-size: 1.2em; line-height: 1.7; margin-bottom: 16px;">That tradition inspired us to bring the same flavor, passion, and hospitality to <strong>Quincy, Illinois</strong> — a place we now proudly call home.</p>
-    <p style="font-size: 1.2em; line-height: 1.7; margin-bottom: 16px;">Every Spincy wrap is handcrafted with marinated chicken, warm lavash, fresh vegetables, and bold, savory sauce — all served with care and love.</p>
-    <p style="font-size: 1.2em; line-height: 1.7;">Whether you’re grabbing a quick bite or connecting with friends, we’re here to turn every meal into a flavorful moment that brings people together.</p>
-  </div>
-</section>
+          <p>Our love for chicken döner was born in the vibrant streets of <strong>Istanbul</strong>, where the aroma of fire-roasted meat, the rhythm of busy sidewalks, and the joy of sharing meals with loved ones fills every corner.</p>
 
-<!-- MISSION SECTION -->
-<section id="mission" style="background-color: #fff8f0; padding: 60px 20px;">
-  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; max-width: 1200px; margin: 0 auto; gap: 40px;">
-    <div style="flex: 1; min-width: 300px;">
-     <div style="
-  background: #ffd700;
-  padding: 25px 50px;
-  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  margin-bottom: 40px;
-  display: inline-block;
-">
-  <h2 style="
-    font-size: 2.5em;
-    color: #a11414;
-    font-weight: bold;
-    margin: 0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  ">Our Mission</h2>
-</div>
+          <p>That tradition inspired us to bring the same flavor, passion, and hospitality to <strong>Quincy, Illinois</strong> — a place we now proudly call home.</p>
 
-      <p style="font-size: 1.1em; line-height: 1.6;">
-  At <strong>Spincy</strong>, our mission goes beyond serving great food — we want to nourish our community in every sense.
+          <p>Every Spincy wrap is handcrafted with marinated chicken, warm lavash, fresh vegetables, and bold, savory sauce — all served with care and love.</p>
 
-Inspired by the Turkish tradition of <strong>"askıda ekmek"</strong>, we’ve launched the <strong>“Wrap It Forward”</strong> program: a simple way for customers to donate a meal for someone in need.
-
-Whether you donate $1 or cover an entire wrap, your kindness goes directly to feeding someone who could use a warm, delicious meal.
-
-We’re also proud to support families using <strong>SNAP</strong> (EBT/Food Stamps). If you show a valid SNAP card, you’ll receive <strong>50% off</strong> your first meal — because everyone deserves access to warm, nourishing food, no matter their situation.
-
-<p>
-  At Spincy, we believe food is a human right — and when we share it, we bring hope, dignity, and connection.
-</p>
-
-<div style="text-align: center; margin-top: 30px;">
-  <a href="https://square.link/u/zVDvdNQa" style="
-    display: inline-block;
-    background: #e12c2c;
-    color: white;
-    padding: 16px 35px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  ">
-    🍽️ Donate a Meal
-  </a>
-</div>
-
-
-    </div>
-    <div style="flex: 1; min-width: 300px;">
-      <img src="hoagie.jpg" alt="Spincy Hoagie" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    </div>
-  </div>
-</section>
-<section style="
-  background: url('spin us.png') center/cover no-repeat;
-  background-color: #fff2e6;
-  padding: 120px 20px;
-  text-align: center;
-  color: white;
-  position: relative;
-  min-height: 500px;
-">
-    <!-- DoorDash Icon - Top Left -->
-  <a href="https://www.doordash.com/store/spincy-quincy" target="_blank" style="
-    position: absolute;
-    top: 30px;
-    left: 30px;
-  ">
-    <img src="doordash.jfif" alt="DoorDash" style="width: 65px; height: 65px;">
-  </a>
-  <!-- FACEBOOK ICON TOP RIGHT -->
-<a href="https://www.facebook.com/spincyquincy" target="_blank" style="position: absolute; top: 20px; right: 20px;">
-  <img src="facebook.jpg" alt="Facebook" style="height: 60px;">
-</a>
-
- 
-
-  <a href="https://www.instagram.com/spincyquincy" target="_blank" style="
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-  ">
-    <img src="instagram.png" alt="Instagram" style="width: 70px; height: 70px;">
-  </a>
-
-  <a href="mailto:spincyquincy@gmail.com" style="
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-  ">
-    <img src="email.jpg" alt="Email" style="width: 70px; height: 70px;">
-  </a>
-</section>
-
-<!-- Floating Menu Order Button -->
-<a href="menu.html" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #e12c2c;
-  color: white;
-  padding: 14px 24px;
-  font-size: 1.1em;
-  font-weight: bold;
-  border-radius: 10px;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-">
-  📋 View Full Menu & Order
-</a>
-
-<section id="contact" style="background:#fff9f1; padding:65px 20px; text-align:center;">
-
-  <div style="max-width:650px; margin:auto; background:white; padding:35px 25px; border-radius:16px; box-shadow:0 5px 25px rgba(0,0,0,0.08); box-sizing:border-box;">
-
-    <h2 style="color:#e12c2c; font-size:2.3em; margin:0 0 15px;">
-      📍 Visit Us
-    </h2>
-
-    <p style="font-size:1.1em; color:#333;">
-      626 Maine Street<br>
-      Quincy, IL 62301
-    </p>
-
-    <h3 style="color:#e12c2c; font-size:1.6em; margin-top:30px;">
-      🕙 Our Hours
-    </h3>
-
-    <div style="max-width:440px; margin:20px auto;">
-
-      <div style="display:flex; justify-content:space-between; gap:12px; padding:14px 5px; border-bottom:1px solid #eee;">
-        <strong>Monday – Thursday</strong>
-        <span>10 AM – 8 PM</span>
+          <p>Whether you’re grabbing a quick bite or connecting with friends, we’re here to turn every meal into a flavorful moment that brings people together.</p>
+        </div>
       </div>
 
-      <div style="display:flex; justify-content:space-between; gap:12px; padding:14px 5px; border-bottom:1px solid #eee;">
-        <strong>Friday</strong>
-        <span>10 AM – 9 PM</span>
-      </div>
-
-      <div style="display:flex; justify-content:space-between; gap:12px; padding:14px 5px; border-bottom:1px solid #eee;">
-        <strong>Saturday</strong>
-        <span>11 AM – 9 PM</span>
-      </div>
-
-      <div style="display:flex; justify-content:space-between; gap:12px; padding:14px 5px;">
-        <strong>Sunday</strong>
-        <strong style="color:#e12c2c;">CLOSED</strong>
-      </div>
-
+      <img class="food-img" src="hoagie.jpg" alt="Spincy chicken hoagie">
     </div>
+  </section>
 
-    <p style="background:#fff1cc; color:#8a4a00; padding:15px; border-radius:8px; font-weight:bold;">
-      Fresh flavors, six days a week!
-    </p>
+  <!-- OUR MISSION -->
+  <section class="content mission" id="mission">
+    <div class="container two-col">
+      <div>
+        <div class="section-label">Wrap It Forward</div>
+        <h2>Our Mission</h2>
 
-    <a href="https://www.google.com/maps/search/?api=1&query=626+Maine+Street+Quincy+IL+62301"
-       target="_blank" rel="noopener noreferrer"
-       style="display:inline-block; margin-top:15px; background:#e12c2c; color:white; padding:14px 28px; border-radius:30px; text-decoration:none; font-weight:bold;">
-      📍 Get Directions
-    </a>
+        <p>At <strong>Spincy</strong>, our mission goes beyond serving great food — we want to nourish our community in every sense.</p>
 
-  </div>
-</section>
+        <p>Inspired by the Turkish tradition of <strong>askıda ekmek</strong>, we’ve launched the <strong>Wrap It Forward</strong> program: a simple way for customers to donate a meal for someone in need.</p>
 
-  </p>
+        <p>Whether you donate $1 or cover an entire wrap, your kindness goes directly to feeding someone who could use a warm, delicious meal.</p>
 
-  
-  
-  <p style="font-size: 1.1em; margin-bottom: 10px;">
-    📞 <strong>((217)919-6432</strong>
-  </p>
+        <p>We’re also proud to support families using <strong>SNAP</strong> (EBT/Food Stamps). If you show a valid SNAP card, you’ll receive <strong>50% off</strong> your first meal — because everyone deserves access to warm, nourishing food, no matter their situation.</p>
 
-  <p style="font-size: 3.3em;">
-    📬 <strong>626 Maine Street Quincy, IL 62301</strong>
-  </p>
+        <p><small>This is a Spincy-funded discount; it does not mean SNAP benefits can be used to purchase hot prepared meals.</small></p>
 
-</div>
-</section>
+        <p>At Spincy, we believe food is a human right — and when we share it, we bring hope, dignity, and connection.</p>
 
+        <a class="btn btn-red" href="https://square.link/u/zVDvdNQa">
+          🍽️ Donate a Meal
+        </a>
+      </div>
 
+      <img class="food-img" src="hoagie.jpg" alt="Fresh Spincy sandwich">
+    </div>
+  </section>
 
+  <!-- SOCIAL MEDIA -->
+  <section class="content connect" id="connect">
+    <div class="container">
+      <div class="section-label">Stay Connected</div>
+      <h2>Follow the Flavor</h2>
 
-<!-- FOOTER -->
-<footer>
-  &copy; 2025 Spincy Quincy. All rights reserved.
-</footer>
+      <p>See what's happening at Spincy, or get your favorites delivered.</p>
+
+      <div class="socials">
+        <a href="https://www.doordash.com/store/spincy-quincy" target="_blank" rel="noopener noreferrer">
+          <img src="doordash.jfif" alt="">DoorDash
+        </a>
+
+        <a href="https://www.facebook.com/spincyquincy" target="_blank" rel="noopener noreferrer">
+          <img src="facebook.jpg" alt="">Facebook
+        </a>
+
+        <a href="https://www.instagram.com/spincyquincy" target="_blank" rel="noopener noreferrer">
+          <img src="instagram.png" alt="">Instagram
+        </a>
+
+        <a href="mailto:spincyquincy@gmail.com">
+          <img src="email.jpg" alt="">Email Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION AND OPENING HOURS -->
+  <section class="content visit" id="contact">
+    <div class="container">
+      <div class="visit-header">
+        <div class="section-label">Come hungry</div>
+        <h2>Visit Spincy</h2>
+        <p>We'd love to see you in downtown Quincy.</p>
+      </div>
+
+      <div class="visit-grid">
+
+        <div class="card">
+          <h3>🕙 Opening Hours</h3>
+
+          <div class="hours-row">
+            <strong>Monday – Thursday</strong>
+            <span>10 AM – 8 PM</span>
+          </div>
+
+          <div class="hours-row">
+            <strong>Friday</strong>
+            <span>10 AM – 9 PM</span>
+          </div>
+
+          <div class="hours-row">
+            <strong>Saturday</strong>
+            <span>11 AM – 9 PM</span>
+          </div>
+
+          <div class="hours-row">
+            <strong>Sunday</strong>
+            <span class="closed">CLOSED</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>📍 Find Us</h3>
+
+          <p class="address">
+            <strong>626 Maine Street</strong><br>
+            Quincy, IL 62301
+          </p>
+
+          <p class="contact-line">
+            📞 <a href="tel:+12179196432">(217) 919-6432</a>
+          </p>
+
+          <p class="contact-line">
+            ✉️ <a href="mailto:spincyquincy@gmail.com">spincyquincy@gmail.com</a>
+          </p>
+
+          <a class="btn btn-red"
+             href="https://www.google.com/maps/search/?api=1&amp;query=626+Maine+Street+Quincy+IL+62301"
+             target="_blank"
+             rel="noopener noreferrer">
+            Get Directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2026 Spincy Quincy. All rights reserved.
+  </footer>
 
 </body>
 </html>
